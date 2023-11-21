@@ -10,7 +10,47 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
+  {
+    path: 'attendies',
+    loadChildren: () => import('./attendies/attendies.module').then( m => m.AttendiesPageModule)
+  },
+  {
+    path: 'classes',
+    loadChildren: () => import('./classes/classes.module').then( m => m.ClassesPageModule)
+  },
+  {
+    path: 'lecture',
+    loadChildren: () => import('./lecture/lecture.module').then( m => m.LecturePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'qr-scan',
+    loadChildren: () => import('./qr-scan/qr-scan.module').then( m => m.QrScanPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'stude-scan',
+    loadChildren: () => import('./stude-scan/stude-scan.module').then( m => m.StudeScanPageModule)
+  },
+  {
+    path: 'students',
+    loadChildren: () => import('./students/students.module').then( m => m.StudentsPageModule)
+  },
+
 ];
 
 @NgModule({
